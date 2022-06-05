@@ -1,18 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { data } from "./data/data";
 
-const logo = "https://freesvg.org/img/Gerald_G_Fast_Food_Lunch_Dinner_(FF_Menu)_6.png";
-
 function App() {
-  console.log("data is:", data);
-
-  data.map((item) => {});
-
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <h2>PEEPLZ</h2>
         <table>
           <thead>
@@ -21,10 +14,10 @@ function App() {
               <th>Age</th>
             </tr>
           </thead>
-        
+
           <tbody>
             {data.map((item) => (
-              <tr>
+              <tr key={item.id}>
                 <td>{item.name}</td>
                 <td>{item.age}</td>
               </tr>
