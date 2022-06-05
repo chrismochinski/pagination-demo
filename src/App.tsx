@@ -7,6 +7,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h2>PEEPLZ</h2>
+      </header>
+      <div className="container">
         <table>
           <thead>
             <tr>
@@ -14,7 +16,6 @@ function App() {
               <th>Age</th>
             </tr>
           </thead>
-
           <tbody>
             {data.map((item) => (
               <tr key={item.id}>
@@ -24,10 +25,7 @@ function App() {
             ))}
           </tbody>
         </table>
-        <a className="App-link" href="http://chrismochinski.com" target="_blank" rel="noopener noreferrer">
-          Mo
-        </a>
-      </header>
+      </div>
     </div>
   );
 }
