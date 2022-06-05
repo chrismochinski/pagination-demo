@@ -19,31 +19,27 @@
   color: #fff;
 }
 
-table {
-  border-collapse: collapse;
+.mantineTable {
+  max-width: 50vw;
   margin-inline: auto;
+  border: 5px solid #fff;
+  border-collapse: collapse;
+  line-height: unset;
 }
 
-table,
-th,
-td {
-  border: 3px solid #ffffff;
+th, tr, td {
+  border: 3px solid purple;
 }
 
-th {
-  background-color: #ff00ff50;
+thead tr th {
+  background-color: purple;
+  color: #fff !important;
+  text-align: center !important;
+  font-size: 32px !important;
 }
 
-th,
-td {
-  padding: 5px 12px;
+tbody tr td {
+  font-size: 26px !important;
 }
 
-td:not(:last-of-type) {
-  background-color: #ffff4d;
-  color: #000;
-}
 
-td:last-of-type {
-  background-color: #00800052;
-}

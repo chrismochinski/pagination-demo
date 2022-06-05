@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { Group, Table } from "@mantine/core";
 import "./App.css";
 import { data } from "./data/data";
 
@@ -8,8 +8,8 @@ function App() {
       <header className="App-header">
         <h2>PEEPLZ</h2>
       </header>
-      <div className="container">
-        <table>
+      <Group className="container">
+        <Table className="mantineTable" verticalSpacing="sm" fontSize="xl" striped highlightOnHover>
           <thead>
             <tr>
               <th>Name</th>
@@ -24,8 +24,8 @@ function App() {
               </tr>
             ))}
           </tbody>
-        </table>
-      </div>
+        </Table>
+      </Group>
     </div>
   );
 }
