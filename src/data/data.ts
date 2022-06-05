@@ -55,7 +55,6 @@ export const data: people[] = [
   { id: 48, name: "Eddie", age: 99 },
   { id: 49, name: "Cherie", age: 72 },
   { id: 50, name: "Cindy", age: 68 },
-  { id: 74, name: "Edith", age: 91 },
   { id: 51, name: "Diana", age: 35 },
   { id: 52, name: "Tony", age: 12 },
   { id: 53, name: "Diane", age: 33 },
@@ -79,4 +78,6 @@ export const data: people[] = [
   { id: 71, name: "Ed", age: 1 },
   { id: 72, name: "Edwin", age: 97 },
   { id: 73, name: "Edwina", age: 95 },
+  { id: 74, name: "Edith", age: 93 },
+  { id: 75, name: "Cruz", age: 51 },
 ];
