@@ -24,8 +24,8 @@ function App() {
 
   const paginate = (pageNumber: number) => {
     console.log('in paginate function');
-    setCurrentPage(pageNumber)
-  }
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <Group className="App">
@@ -77,7 +77,7 @@ function App() {
         </Group>
         <Group className="pagination-wrapper">
           <PaginationComponent
-          paginate={paginate}
+            paginate={paginate}
             data={data}
             totalPeople={data.length}
             resultsPerPage={resultsPerPage}
