@@ -1,17 +1,27 @@
-import { People } from './data/data';
+import { useEffect } from 'react';
+import { People, data } from './data/data';
 
 interface Props {
-  item: People;
+  data: People[];
 }
 
-const TableItem: React.FC<Props> = ({ item }) => {
+const TableItem: React.FC<Props> = ({ data }) => {
+  useEffect((): void => {
+    // console.log('item is:', post);
+  });
+
   return (
-    <tr key={item.id}>
-      <td>{item.id}</td>
-      <td>{item.name}</td>
-      <td>{item.age}</td>
-    </tr>
+    <>
+      {data.map((post) => (
+        <tr className="list-group-item">
+          <td>{post.id}</td>
+          <td>{post.name}</td>
+          <td>{post.age}</td>
+        </tr>
+      ))}
+    </>
   );
 };
 
 export default TableItem;
+ 

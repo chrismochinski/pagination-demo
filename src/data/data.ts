@@ -80,4 +80,6 @@ export const data: People[] = [
   { id: 73, name: "Edwina", age: 95 },
   { id: 74, name: "Edith", age: 93 },
   { id: 75, name: "Cruz", age: 51 },
+  { id: 76, name: "Curtis", age: 49 },
+  { id: 77, name: "Bruce", age: 18 },
 ];

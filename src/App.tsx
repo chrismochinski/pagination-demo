@@ -1,17 +1,24 @@
-import { AppShell, Footer, Group, Navbar, Table, Text } from '@mantine/core';
+import { AppShell, Footer, Group, Navbar, Table, Text, Pagination } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import './App.css';
 import { data } from './data/data';
 import TableItem from './TableItem';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [resultsPerPage, setResultsPerPage] = useState(10);
-  const [totalResults, setTotalResults] = useState(data);
+  // const [people, setPeople] = useState<People[]>(data); // equivalent to "posts" in example
+  const [currentPage, setCurrentPage] = useState(1); //from example verbatim
+  const [resultsPerPage, setResultsPerPage] = useState(10); // "posts per page" in example
 
   useEffect((): void => {
-    console.log('app.tsx, data (as state) -', totalResults);
-  }, [totalResults]);
+    console.log('data is:', data);
+  }, [data]);
+
+  // Get current posts
+  const indexOfLastPerson = currentPage * resultsPerPage;
+  const indexOfFirstPerson = indexOfLastPerson - resultsPerPage;
+  const currentPeople = data.slice(indexOfFirstPerson, indexOfLastPerson);
+
+  console.log('currentPeople/persons is:', currentPeople);
 
   return (
     <Group className="App">
@@ -57,9 +64,7 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              {data.map((item) => (
-                <TableItem item={item} />
-              ))}
+              <TableItem data={currentPeople} />
             </tbody>
           </Table>
         </Group>

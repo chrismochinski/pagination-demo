@@ -17,7 +17,7 @@
 
 .main-header {
   font-size: 2em;
-  padding-top: 0.5em;
+  padding-block: 1.25em 0.5em;
   font-weight: 700;
   font-family: "Zilla Slab", serif;
 }
@@ -26,6 +26,7 @@
   background-color: #282c34;
   font-size: 2em;
   color: #fff;
+  padding-bottom: 3em;
 }
 
 .nav-text {
