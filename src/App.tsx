@@ -1,12 +1,16 @@
 import { AppShell, Footer, Group, Navbar, Table, Text } from "@mantine/core";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { data } from "./data/data";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [resultsPerPage, setResultsPerPage] = useState(10);
+  const [totalResults, setTotalResults] = useState(data);
+
   useEffect((): void => {
-    console.log("app.tsx, data=", data);
-  }, []);
+    console.log("app.tsx, data (as state) -", totalResults);
+  }, [totalResults]);
 
   return (
     <div className="App">
