@@ -1,10 +1,10 @@
-type people = {
+export interface People {
   id: number;
   name: string;
   age: number;
 };
 
-export const data: people[] = [
+export const data: People[] = [
   { id: 1, name: "John", age: 30 },
   { id: 2, name: "Mary", age: 55 },
   { id: 3, name: "Peter", age: 20 },
