@@ -13,7 +13,7 @@ const TableItem: React.FC<Props> = ({ data }) => {
   return (
     <>
       {data.map((post) => (
-        <tr className="list-group-item">
+        <tr key={post.id} className="list-group-item">
           <td>{post.id}</td>
           <td>{post.name}</td>
           <td>{post.age}</td>
@@ -24,4 +24,3 @@ const TableItem: React.FC<Props> = ({ data }) => {
 };
 
 export default TableItem;
- 

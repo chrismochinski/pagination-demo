@@ -3,11 +3,13 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { data } from './data/data';
 import TableItem from './TableItem';
+import PaginationComponent from './PaginationComponent';
 
 function App() {
   // const [people, setPeople] = useState<People[]>(data); // equivalent to "posts" in example
   const [currentPage, setCurrentPage] = useState(1); //from example verbatim
   const [resultsPerPage, setResultsPerPage] = useState(10); // "posts per page" in example
+  const [totalPeople, setTotalPeople] = useState(data.length); // "total posts" in example
 
   useEffect((): void => {
     console.log('data is:', data);
@@ -19,6 +21,11 @@ function App() {
   const currentPeople = data.slice(indexOfFirstPerson, indexOfLastPerson);
 
   console.log('currentPeople/persons is:', currentPeople);
+
+  const paginate = (pageNumber: number) => {
+    console.log('in paginate function');
+    setCurrentPage(pageNumber)
+  }
 
   return (
     <Group className="App">
@@ -67,6 +74,15 @@ function App() {
               <TableItem data={currentPeople} />
             </tbody>
           </Table>
+        </Group>
+        <Group className="pagination-wrapper">
+          <PaginationComponent
+          paginate={paginate}
+            data={data}
+            totalPeople={data.length}
+            resultsPerPage={resultsPerPage}
+            currentPage={currentPage}
+          />
         </Group>
       </AppShell>
     </Group>

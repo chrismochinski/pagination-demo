@@ -26,7 +26,7 @@
   background-color: #282c34;
   font-size: 2em;
   color: #fff;
-  padding-bottom: 3em;
+  padding-bottom: 2em;
 }
 
 .nav-text {
@@ -92,4 +92,22 @@ tbody tr td {
 /*2n = every other, +2= "starting with the 2nd" */
 tbody tr:nth-child(2n + 2) {
   color: #fff !important;
+}
+
+.pagination-wrapper {
+  background-color: #282c34;
+  color: white;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+a.page-link {
+  color: white;
+  text-decoration: none;
+}
+
+a.page-link:hover {
+  text-decoration: underline;
+  font-weight: bolder;
 }
